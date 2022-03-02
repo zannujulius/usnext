@@ -1,0 +1,40 @@
+.homecover {
+  width: 100%;
+  padding: 5px;
+}
+
+.homenavlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.homenavlinkcover > svg {
+  fill: #8d8d8d;
+}
+
+.homenavlinkcover {
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0 0 0;
+}
+
+.homenavlinktext {
+  text-transform: uppercase;
+  color: #8d8d8d;
+  font-weight: 500;
+}
+
+.homecontent {
+  width: 100%;
+  height: 600px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.hometopcontenttitle {
+  color: #272727;
+}
