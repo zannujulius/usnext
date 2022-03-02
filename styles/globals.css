@@ -234,14 +234,24 @@ body {
   display: flex;
   width: 100%;
   align-items: center;
-  background: #0183d0;
   padding: 7px 9px;
   border-radius: 10px;
+  margin-bottom: .5rem;
+}
+.sidenav-item .sidenav-item__title, .sidenav-item__img-cover svg path {
+  color: #0183d0;
+}
+
+.sidenav-item.active {
+  background: #0183d0;
+  color: white;
+}
+.sidenav-item.active .sidenav-item__title, .sidenav-item.active .sidenav-item__img-cover svg path {
+  color: white;
 }
 
 .sidenav-item__title {
   font-size: 0.8rem;
-  color: #fff;
 }
 
 .sidenav-item__img-cover {
@@ -274,4 +284,101 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+summary {
+  display: block;
+  cursor: pointer;
+  outline: 0; 
+  display: flex;
+  padding: 7px 9px;
+  margin-bottom: .5rem;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+  }
+
+.tree-nav__item {
+  display: block;
+  white-space: nowrap;
+  color: #0183d0;
+  position: relative;
+}
+.tree-nav__item.is-expandable::after {
+  border-left: 1px solid #0183d0;
+  content: "";
+  height: calc(100% - 45px);
+  left: 10%;
+  position: absolute;
+  top: 2.4rem;
+}
+.tree-nav__item .tree-nav__item {
+  margin-left: 2.4rem;
+}
+.tree-nav__item.is-expandable[open] > .tree-nav__item-title::after {
+  font-family: "ionicons";
+  transform: rotate(180deg);
+  bottom: calc(100% - 39px);
+}
+.tree-nav__item.is-expandable > .tree-nav__item-title::after {
+  position: absolute;
+  will-change: transform;
+  transition: ease;
+  font-family: "ionicons";
+  color: #0183d0;
+  content: "\2304";
+  display: inline-block;
+  width: 1.6rem;
+  text-align: center;
+  left: 85%;
+  bottom: 35%;
+  font-size: 1.3rem;
+}
+
+.tree-nav__item-title {
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  color: #0183d0;
+  display: flex;
+}
+.tree-nav__item-title .icon {
+  display: inline;
+  padding-left: 1.6rem;
+  margin-right: 0.8rem;
+  color: #0183d0;
+  font-size: 1.4rem;
+  position: relative;
+}
+.tree-nav__item-title .icon::after {
+  top: 0;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 1.6rem;
+  text-align: center;
+}
+
+.tree-nav__item-title::-webkit-details-marker {
+  display: none;
+}
+
+
+
+.hashtag-nav {
+  padding-top: 20px;
+}
+
+.hashtag-nav__container {
+  padding: 5px;
+}
+
+.hashtag-nav__title {
+  color: #888;
+  padding: 5px 0;
+}
+
+.hashtag-nav__content {
+  color: #0183d0;
 }
