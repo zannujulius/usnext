@@ -4,10 +4,11 @@ import Chart from "chart.js/auto";
 
 const LineChart = () => {
   const chartRef = useRef();
-  const ctx = chartRef.current.canvas.getContext("2d");
-  const gradient = ctx.createLinearGradient(0, 0, 0, 300);
-  gradient.addColorStop(0, "#0183d0");
-  gradient.addColorStop(1, "#05121a");
+  // const
+  // const ctx = chartRef.current.canvas.getContext("2d");
+  // const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+  // gradient.addColorStop(0, "#0183d0");
+  // gradient.addColorStop(1, "#05121a");
   return (
     <div className="chart-container">
       <div className="chart-title">Saldo biezqce sprawy</div>
@@ -44,7 +45,7 @@ const LineChart = () => {
           options={{
             responsive: true,
             maintainAspectRatio: false,
-            backgroundColor: gradient,
+            backgroundColor: "#0183d0",
             fill: true,
             label: "",
             plugins: {
@@ -70,6 +71,7 @@ const LineChart = () => {
                   font: {
                     size: 10,
                   },
+                  mirror: true,
                 },
               },
               y: {
