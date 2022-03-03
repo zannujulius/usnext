@@ -1,8 +1,13 @@
-import React, { useRef } from "react";
+import React, { Component, useRef } from "react";
 import { Area, Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
 const LineChart = () => {
+  const chartRef = useRef();
+  const ctx = chartRef.current.canvas.getContext("2d");
+  const gradient = ctx.createLinearGradient(0, 0, 0, 300);
+  gradient.addColorStop(0, "#0183d0");
+  gradient.addColorStop(1, "#05121a");
   return (
     <div className="chart-container">
       <div className="chart-title">Saldo biezqce sprawy</div>
@@ -11,6 +16,7 @@ const LineChart = () => {
       </div>
       <div className="line-chart">
         <Line
+          ref={chartRef}
           data={{
             labels: [65, 59, 80, 81, 56, 55, 40],
             datasets: [
@@ -30,6 +36,7 @@ const LineChart = () => {
                 pointHoverBorderWidth: 2,
                 pointRadius: 3,
                 pointHitRadius: 10,
+                fill: true,
                 data: [65, 59, 80, 81, 56, 55, 40],
               },
             ],
@@ -37,7 +44,7 @@ const LineChart = () => {
           options={{
             responsive: true,
             maintainAspectRatio: false,
-            backgroundColor: "#0183d0",
+            backgroundColor: gradient,
             fill: true,
             label: "",
             plugins: {
