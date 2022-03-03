@@ -1,6 +1,7 @@
 .homecover {
   width: 100%;
   padding: 5px;
+  height: auto;
 }
 
 .homenavlink {
@@ -30,10 +31,11 @@
 
 .homecontent {
   width: 100%;
-  height: 600px;
+  height: auto;
   background: #fff;
   border-radius: 3px;
-  padding: 9px;
+  padding: 9px 15px;
+  margin: 0 0 50px 0;
 }
 .hometopcontent {
   width: 100%;
