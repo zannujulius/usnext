@@ -6,14 +6,17 @@ import { MdVerified, MdOutlineLogout } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiLogOut } from "react-icons/fi";
 import { IconContext } from "react-icons";
+import Image from "next/image";
+import Logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   return (
     <div className="nav">
       <div className="nav-container">
         <div className="navbrand">
-          <div className="nav-brand__logo"></div>
-          <div className="nav-brand__title"> </div>
+          <div className="nav-brand__image">
+            <Image src={Logo} width={130} height={50} style={{}} />
+          </div>
         </div>
         <div className="nav-middle">
           <div className="nav-search__icon">
@@ -27,7 +30,13 @@ const Navbar = () => {
               <BiChat size={22} className="svg" />
             </div>
             <div className="nav-notification__icon-cover">
-              <IoNotificationsOutline size={20} color={"red"} />
+              <IoNotificationsOutline
+                size={20}
+                className="arrowd"
+                style={{
+                  stroke: "#ccc",
+                }}
+              />
               <div className="notification-bg"></div>
             </div>
           </div>
@@ -50,7 +59,13 @@ const Navbar = () => {
               <IoIosArrowDown size={18} className="arrowd" />
             </div>
             <div className="nav-profile__logout-btn__cover">
-              <FiLogOut size={20} color={"#eeeeee"} className="icon" />
+              <FiLogOut
+                size={20}
+                style={{
+                  stroke: "#ccc",
+                }}
+                className="icon"
+              />
             </div>
           </div>
         </div>

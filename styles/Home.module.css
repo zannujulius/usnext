@@ -25,6 +25,7 @@
   text-transform: uppercase;
   color: #8d8d8d;
   font-weight: 500;
+  font-size: 12px;
 }
 
 .homecontent {
@@ -32,9 +33,30 @@
   height: 600px;
   background: #fff;
   border-radius: 3px;
-  padding: 5px;
+  padding: 9px;
+}
+.hometopcontent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .hometopcontenttitle {
   color: #272727;
+  font-size: 13px;
+  padding: 6px 0;
+  font-weight: 500;
+}
+
+.homeiconcover {
+  fill: #8d8d8d;
+  padding: 0 6px;
+}
+
+.hometopicon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
