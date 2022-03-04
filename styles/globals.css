@@ -500,6 +500,8 @@ summary::-webkit-details-marker {
   display: flex;
   align-items: center;
   margin: 0 0 0 20px;
+  cursor: pointer;
+  transition: all 350ms ease;
 }
 
 .chart-filter__item {
@@ -538,6 +540,12 @@ summary::-webkit-details-marker {
   align-items: center;
   justify-content: center;
   background-color: #15c040;
+}
+
+.rcic.inactive {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
 .rcct {
@@ -661,4 +669,17 @@ hr {
   align-items: center;
   justify-content: center;
   margin: 0 5px;
+}
+
+.topicon > svg {
+  /* fill */
+}
+
+.div > svg {
+  transition: all 150ms ease;
+  fill: #8d8d8d;
+}
+
+.div > svg:hover {
+  fill: #0183d0;
 }

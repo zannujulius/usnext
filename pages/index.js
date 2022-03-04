@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -41,6 +42,7 @@ export default function Home() {
       caption: "023512718",
     },
   ];
+  const [dateFilter, setDateFilter] = useState(4);
   return (
     <div className={styles.homecover}>
       <div className={styles.homenavlink}>
@@ -87,39 +89,75 @@ export default function Home() {
           </div>
 
           <div className={styles.hometopicon}>
-            <div className={styles.homeiconcover}>
-              <BsBookmark
-                size={17}
-                style={{
-                  fill: "#8d8d8d",
-                }}
-              />
+            <div className={[styles.homeiconcover]}>
+              <div className="div">
+                <BsBookmark size={17} />
+              </div>
             </div>
             <div className={styles.homeiconcover}>
-              <BsFillReplyFill
-                size={17}
-                style={{
-                  fill: "#8d8d8d",
-                }}
-              />
+              <div className="div">
+                <BsFillReplyFill size={17} />
+              </div>
             </div>
             <div className={styles.homeiconcover}>
-              <BsThreeDots
-                size={17}
-                style={{
-                  fill: "#8d8d8d",
-                }}
-              />
+              <div className="div">
+                <BsThreeDots size={17} />
+              </div>
             </div>
           </div>
         </div>
         <LineChart />
         <div className="chart-filter__item-cover">
-          <div className="chart-filter__item">1H</div>
-          <div className="chart-filter__item">1D</div>
-          <div className="chart-filter__item active">1W</div>
-          <div className="chart-filter__item">1M</div>
-          <div className="chart-filter__item">1Y</div>
+          <div
+            className={
+              dateFilter == 1
+                ? "chart-filter__item active"
+                : "chart-filter__item"
+            }
+            onClick={() => setDateFilter(1)}
+          >
+            1H
+          </div>
+          <div
+            className={
+              dateFilter == 2
+                ? "chart-filter__item active"
+                : "chart-filter__item"
+            }
+            onClick={() => setDateFilter(2)}
+          >
+            1D
+          </div>
+          <div
+            className={
+              dateFilter == 3
+                ? "chart-filter__item active"
+                : "chart-filter__item"
+            }
+            onClick={() => setDateFilter(3)}
+          >
+            1W
+          </div>
+          <div
+            className={
+              dateFilter == 4
+                ? "chart-filter__item active"
+                : "chart-filter__item"
+            }
+            onClick={() => setDateFilter(4)}
+          >
+            1M
+          </div>
+          <div
+            className={
+              dateFilter == 5
+                ? "chart-filter__item active"
+                : "chart-filter__item"
+            }
+            onClick={() => setDateFilter(5)}
+          >
+            1Y
+          </div>
         </div>
 
         <div className={"hr-divider"}> </div>

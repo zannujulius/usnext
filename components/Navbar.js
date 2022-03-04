@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="navbrand">
           <div className="nav-brand__image">
-            <Image src={Logo} width={130} height={50} style={{}} />
+            <Image src={Logo} width={130} height={50} />
           </div>
         </div>
         <div className="nav-middle">
