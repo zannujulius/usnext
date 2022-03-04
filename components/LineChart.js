@@ -73,13 +73,16 @@ const LineChart = () => {
                   display: true,
                   borderDash: [10],
                   borderDashOffset: 20,
-                  borderWidth: 0,
+                  borderWidth: 3,
+                  color: "white",
+                  z: 4,
                 },
                 ticks: {
                   font: {
                     size: 10,
                   },
                   mirror: true,
+                  z: 3,
                 },
               },
               y: {
