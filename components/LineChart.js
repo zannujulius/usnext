@@ -5,11 +5,6 @@ import Chart from "chart.js/auto";
 const LineChart = () => {
   const chartRef = useRef();
   const [gradientValue, setGradientValue] = useState("");
-  // const
-  // const ctx = chartRef.current.canvas.getContext("2d");
-  // const gradient = ctx.createLinearGradient(0, 0, 0, 300);
-  // gradient.addColorStop(0, "#0183d0");
-  // gradient.addColorStop(1, "#05121a");
   useEffect(() => {
     const ctx = chartRef.current.canvas.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 300);
